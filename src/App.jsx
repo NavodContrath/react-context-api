@@ -1,4 +1,4 @@
-
+import PostPage from "./components/PostsPage"
 function App() {
 
   return (
@@ -30,7 +30,7 @@ function App() {
         </nav>
       </header>
       <main>
-
+        <PostPage />
       </main>
       <footer>
         <nav className="navbar fixed-bottom navbar-expand-sm  bg-secondary">
