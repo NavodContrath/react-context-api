@@ -45,7 +45,7 @@ function App() {
             </div>
           </nav>
         </header>
-        <main>
+        <main className="my-5">
           <PostPage />
         </main>
         <footer>
