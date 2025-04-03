@@ -1,6 +1,21 @@
+import { useState } from "react"
+import { useEffect } from "react"
 import PostPage from "./components/PostsPage"
 function App() {
+  const [posts, setPosts] = useState('')
 
+  useEffect(() => {
+
+    fetch('https://fakestoreapi.com/products')
+      .then(res => res.json())
+      .then(data => setPosts(data))
+      .catch(err => {
+        type: "error"
+        message: err.message
+      })
+
+  }, [])
+  console.log(posts)
   return (
     <>
       <header>
