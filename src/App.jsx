@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import PostPage from "./components/PostsPage"
 import PostContext from "./contexts/PostContext"
 function App() {
-  const [posts, setPosts] = useState('')
+  const [posts, setPosts] = useState([])
 
   useEffect(() => {
 
@@ -14,8 +14,8 @@ function App() {
         type: "error"
         message: err.message
       })
-
   }, [])
+  console.log(posts)
   return (
     <>
       <PostContext.Provider value={{ posts: posts }}>
